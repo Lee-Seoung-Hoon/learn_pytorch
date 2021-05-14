@@ -1,0 +1,15 @@
+Files already downloaded and verified
+[1,  2000] loss: 2.302
+[1,  4000] loss: 2.299
+[1,  6000] loss: 2.259
+[1,  8000] loss: 2.191
+[1, 10000] loss: 2.163
+[1, 12000] loss: 2.142
+[2,  2000] loss: 2.113
+[2,  4000] loss: 2.089
+[2,  6000] loss: 2.089
+[2,  8000] loss: 2.075
+[2, 10000] loss: 2.065
+[2, 12000] loss: 2.051
+Finished Training
+Accuracy of the network on the 10000 test images: 42 %
