@@ -1,0 +1,4 @@
+Files already downloaded and verified
+using gpu!
+Finished Training
+Accuracy of the network on the 10000 test images: 62 %

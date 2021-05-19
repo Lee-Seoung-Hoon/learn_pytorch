@@ -15,7 +15,7 @@ val_dataset = datasets.CIFAR10(root='./data', download=False, train=False,  \
                                   transforms.Normalize((0.4914, 0.4822, 0.4466), (0.2470, 0.2435, 0.2616)) \
                                   ]))
 
-batch_size = 4
+batch_size = 10
 train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=batch_size, shuffle=True)
 
@@ -71,8 +71,8 @@ learning_rate = 1e-3
 optimizer = optim.Adam(cnn.parameters(), lr=learning_rate) 
 
 
-once_p = 1
-for epoch in range(2):
+
+for epoch in range(50):
 
   running_loss = 0.0
   for i, data in enumerate(train_loader, 0):
@@ -105,6 +105,8 @@ total = 0
 with torch.no_grad():
   for data in val_loader:
     images, labels = data
+    if use_cuda:
+      images, labels = images.cuda(), labels.cuda()
     
     outputs = cnn(images)
 
